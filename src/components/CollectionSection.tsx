@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
 import { ArrowUpRight, Sofa } from "lucide-react";
 
@@ -39,7 +39,7 @@ const COLLECTION_ITEMS = [
 ];
 // ────────────────────────────────────────────────────────────
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, x: -20 },
   visible: (i: number) => ({
     opacity: 1,

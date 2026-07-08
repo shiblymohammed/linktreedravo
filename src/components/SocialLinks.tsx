@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { useRef, useCallback } from "react";
 import { ArrowUpRight } from "lucide-react";
 
@@ -73,7 +73,7 @@ const SOCIAL_LINKS = [
 ];
 // ──────────────────────────────────────────────────────────────────────────────
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 40, scale: 0.95 },
   visible: (i: number) => ({
     opacity: 1,
@@ -128,8 +128,11 @@ function SocialCard({ link, index }: { link: (typeof SOCIAL_LINKS)[0]; index: nu
       whileTap={{ scale: 0.98 }}
       onClick={handleClick}
       style={{
-        background: "rgba(255,255,255,0.04)",
-        border: "1px solid rgba(212,175,55,0.12)",
+        background: "rgba(255, 255, 255, 0.05)",
+        border: "1px solid rgba(255, 255, 255, 0.15)",
+        borderTop: "1px solid rgba(255, 255, 255, 0.25)",
+        borderLeft: "1px solid rgba(255, 255, 255, 0.25)",
+        boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.25)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
       }}

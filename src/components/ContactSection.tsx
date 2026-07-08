@@ -89,17 +89,22 @@ export default function ContactSection() {
             rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
             className="group flex items-center gap-4 p-4 rounded-2xl transition-all duration-300"
             style={{
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(212,175,55,0.1)",
-              backdropFilter: "blur(16px)",
+              background: "rgba(255, 255, 255, 0.05)",
+              border: "1px solid rgba(255, 255, 255, 0.15)",
+              borderTop: "1px solid rgba(255, 255, 255, 0.25)",
+              borderLeft: "1px solid rgba(255, 255, 255, 0.25)",
+              boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.25)",
+              backdropFilter: "blur(20px)",
+              WebkitBackdropFilter: "blur(20px)",
             }}
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.3 + i * 0.1, duration: 0.5 }}
             whileHover={{
               x: 5,
-              background: "rgba(212,175,55,0.06)",
-              borderColor: "rgba(212,175,55,0.25)",
+              background: "rgba(255, 255, 255, 0.1)",
+              borderColor: "rgba(255, 255, 255, 0.3)",
+              boxShadow: "0 12px 40px 0 rgba(0, 0, 0, 0.35)",
             }}
             whileTap={{ scale: 0.99 }}
           >
@@ -138,8 +143,12 @@ export default function ContactSection() {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ delay: 0.6, duration: 0.6 }}
         style={{
-          background: "linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.04) 100%)",
-          border: "1px solid rgba(212,175,55,0.2)",
+          background: "rgba(255, 255, 255, 0.05)",
+          border: "1px solid rgba(255, 255, 255, 0.15)",
+          borderTop: "1px solid rgba(255, 255, 255, 0.25)",
+          backdropFilter: "blur(24px)",
+          WebkitBackdropFilter: "blur(24px)",
+          boxShadow: "0 10px 40px rgba(0, 0, 0, 0.3)",
         }}
       >
         {/* Decorative corner */}
